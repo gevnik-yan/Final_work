@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Game of life</title>
+  </head>
+  <body>
+    <img id="darkMode" src="darkmode.png" />
+    <div id="canvas" class="canvas">
+      <script src="script.js"></script>
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+    </div>
+    <div class="parent">
+      <div class="clearCanvas">
+        <button id="clearButton"></button>
+        <p>Սեղմեք կոճակին խաղադաշտը մաքրելու համար</p>
+      </div>
+      <div class="child">
+        <button class="season" id="seasonButton"></button>
+        <div class="tooltip1">
+          <span class="tooltiptext1" id="tooltiptext1"
+            >ՈՒղղանկյանը սեղմելով դուք կարող եք փոխել տարվա եղանակը</span
+          >
+        </div>
+        <div class="Info">
+          <p id="whatSeason" class="whatSeason">Տարվա եղանակ` ամառ</p>
+          <p class="seasonDescription">
+            Տարվա եղանակի փոփոխությունները ազդում են կերպարների վրա։ Խոտը և
+            խոտակերը դանդաղ են բազմանում, իսկ գիշատիչը դանդաղ է շարժվում։
+          </p>
+        </div>
+      </div>
+
+      <div class="child1">
+        <button
+          id="child1"
+          style="
+            width: 60px;
+            height: 60px;
+            background-color: #008013;
+            border: 0px;
+          "
+        ></button>
+        <div class="paragraphs">
+          <h1>Խոտ</h1>
+          <p class="description">Բազմանում է։</p>
+          <p id="grassCount" class="info"></p>
+        </div>
+      </div>
+
+      <div class="child2">
+        <button
+          id="child2"
+          style="
+            width: 60px;
+            height: 60px;
+            background-color: #faf61b;
+            border: 0px;
+          "
+        ></button>
+
+        <div class="paragraphs">
+          <h1>Խոտակեր</h1>
+          <p class="description">Ուտում է խոտերին և բազմանում։</p>
+          <p id="grassEaterCount" class="info"></p>
+        </div>
+      </div>
+
+      <div class="child3">
+        <button
+          id="child3"
+          style="
+            width: 60px;
+            height: 60px;
+            background-color: #8834b3;
+            border: 0px;
+          "
+        ></button>
+        <div class="paragraphs">
+          <h1>Գիշատիչ</h1>
+          <p class="description">Ուտում է ամեն ինչ։</p>
+          <p id="predatorCount" class="info"></p>
+        </div>
+      </div>
+
+      <div class="child4">
+        <button
+          id="child4"
+          style="
+            width: 60px;
+            height: 60px;
+            background-color: #19543e;
+            border: 0px;
+          "
+        ></button>
+        <div class="paragraphs">
+          <h1>Խոտ աճեցնող<h1>
+          <p class="description">
+            Աճեցնում է նոր խոտեր, երբ դրանց քանակը քչանում է։
+          </p>
+          <p id="grassPlanterCount" class="info"></p>
+        </div>
+      </div>
+      <div class="child5">
+        <button
+          id="child5"
+          style="
+            width: 60px;
+            height: 60px;
+            background-color: #d6a100;
+            border: 0px;
+          "
+        ></button>
+        <div class="paragraphs">
+          <h1>Խոտակեր ստեղծող<h1>
+          <p class="description">
+            Ստեղծում է նոր խոտակերներ, երբ դրանց քանակը քչանում է։
+          </p>
+          <p id="grassEaterPlanterCount" class="info"></p>
+        </div>
+      </div>
+      <div class="child6">
+        <button id="bombButton" class="bombButton"></button>
+        <div class="paragraphs">
+          <div class="tooltip">
+            <span class="tooltiptext" id="tooltiptext"
+              >Սեղմեք սև քառակուսւ վրա, որպեսզի պայթեցնեք ռումբերից որևէ
+              մեկը</span
+            >
+          </div>
+          <div class="Info">
+            <h1>Ռումբ<h1>
+              <p class="description">
+                Պայթում է, երբ մոտակայքում հայտնվում է գիշատիչ։
+              </p>
+              <p id="bombCount" class="info"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

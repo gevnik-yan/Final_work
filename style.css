@@ -1,0 +1,183 @@
+body {
+  padding-top: 100px;
+  display: flex;
+  justify-content:space-evenly;
+  background-color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+p {
+  margin: 2.5px;
+}
+
+.dark-mode {
+  background-color: #2C2C2EFF;
+  color: #fff;
+  transition: 0.33s;
+}
+canvas {
+  border: 0.5px solid rgba(148, 148, 148, 0.219);
+}
+.parent {
+  width: 30%;
+  height: 90%;
+}
+
+.whatSeason {
+  font-size: 20px; 
+}
+.Info {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+}
+.parent div {
+  display: flex;
+  height: fit-content;
+  width: fit-content ;
+  margin-bottom: 10px;
+  justify-content:first baseline;
+  justify-content: space-between;
+}
+div.paragraphs {
+  display: flex;
+  flex-direction: column;
+  width:fit-content;
+  margin-top: 0px;
+  margin-left: 20px;
+}
+h1 {
+  font-size: 30px;
+  margin: 2.5px;
+  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif;
+}
+p.description {
+  font-size: 15px;
+}
+p.info {
+  font-size: 15px;
+}
+.bombButton {
+  height: 60px;
+  width: 60px;
+  background-color: #000000;
+  border-radius: 0px;
+  border: 0px;
+  transition: 0.2s;
+}
+.bombButton:active {
+  background-color: rgb(85, 85, 85);
+}
+.bombButton:hover {
+  transition: 0.2s;
+  box-shadow: 1px 1px 15px 1px #5c5c5c;
+}
+.canvas {
+  height: 0px;
+  width: 0px;
+}
+
+.season {
+  height: 35px;
+  width: 65px;
+  background-color: #666666;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  border: 0px;
+  border-radius: 1px;
+}
+.season:active {
+  transition: 0.2s;
+  background-color: rgb(165, 165, 165);
+}
+.season:hover {
+  transition: 0.2s;
+  box-shadow: 1px 1px 15px 1px #5c5c5c;
+}
+img {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: rgba(0, 0, 0, 0.492);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 3px;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  display:block;
+  position:fixed;
+  overflow:hidden;
+  opacity: 1;
+}
+
+.tooltip1 {
+  position: relative;
+  display: inline-block;
+  width: 450px;
+}
+.tooltip1 .tooltiptext1 {
+  visibility: hidden;
+  width: 250px;
+  background-color: rgba(0, 0, 0, 0.492);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 3px;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip1:hover .tooltiptext1 {
+  visibility: visible;
+  display:block;
+  position:fixed;
+  overflow:hidden;
+  opacity: 1;
+}
+
+#clearButton {
+  height: 35px;
+  width: 60px;
+  background-color: #666666;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  border: 0px;
+  border-radius: 1px;
+}
+#clearButton:hover {
+  transition: 0.2s;
+  box-shadow: 1px 1px 15px 1px #5c5c5c;
+}
+#clearButton:active {
+  transition: 0.2s;
+  background-color: rgb(165, 165, 165);
+}
+.clearCanvas {
+  display: flex;
+  height: 70px;
+  width: 500px;
+}
+.clearCanvas p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  margin-bottom: 0px;
+  margin-top: 3px;
+}

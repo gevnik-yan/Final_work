@@ -1,0 +1,28 @@
+{
+  "name": "programming3",
+  "version": "1.0.0",
+  "main": "server.js",
+  "module": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aram-123/programming3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aram-123/programming3/issues"
+  },
+  "homepage": "https://github.com/Aram-123/programming3#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "socket.io": "^4.4.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.70.0"
+  },
+  "description": ""
+}
